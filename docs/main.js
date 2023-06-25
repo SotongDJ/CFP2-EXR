@@ -377,7 +377,7 @@ controlSpan.className = "tagBorder";
 controlSpan.appendChild(link(playlist[tar]["apple"],[fontAwe("fa-brands fa-apple fa-fw")],"podcast"));
 controlSpan.appendChild(link(playlist[tar]["google"],[fontAwe("fa-brands fa-google fa-fw")],"podcast"));
 controlSpan.appendChild(link(playlist[tar]["spotify"],[fontAwe("fa-brands fa-spotify fa-fw")],"podcast"));
-controlSpan.appendChild(link(playlist[tar]["youtube"],[fontAwe("fa-brands fa-youtube fa-fw")],"podcast"));
+// controlSpan.appendChild(link(playlist[tar]["youtube"],[fontAwe("fa-brands fa-youtube fa-fw")],"podcast"));
 buttonPdom.appendChild(controlSpan);
 var shareSpan = document.createElement('span');
 shareSpan.className = "tagBorder";
@@ -781,7 +781,7 @@ controlSpan.className = "tagBorder";
 controlSpan.appendChild(link(playlist[tar]["apple"],[fontAwe("fa-brands fa-apple fa-fw")],"podcast"));
 controlSpan.appendChild(link(playlist[tar]["google"],[fontAwe("fa-brands fa-google fa-fw")],"podcast"));
 controlSpan.appendChild(link(playlist[tar]["spotify"],[fontAwe("fa-brands fa-spotify fa-fw")],"podcast"));
-controlSpan.appendChild(link(playlist[tar]["youtube"],[fontAwe("fa-brands fa-youtube fa-fw")],"podcast"));
+// controlSpan.appendChild(link(playlist[tar]["youtube"],[fontAwe("fa-brands fa-youtube fa-fw")],"podcast"));
 buttonPdom.appendChild(controlSpan);
 var shareSpan = document.createElement('span');
 shareSpan.className = "tagBorder";
@@ -790,22 +790,22 @@ shareSpan.appendChild(link(shareStr,[fontAwe("fa-solid fa-share-from-square fa-f
 buttonPdom.appendChild(shareSpan);
 entryPg.appendChild(buttonPdom);
 // entryPg.appendChild(document.createElement("p"));
-var extraArr = Object.keys(playlist[tar]["extra"]);
-if (extraArr.length > 0) {
-for (let ind = 0; ind < extraArr.length; ind++) {
-var extraKey = extraArr[ind];
-var extraValue = playlist[tar]["extra"][extraKey];
-var extraP = document.createElement("p");
-extraP.className = "extraLink entryDetailMove";
-var extraA = document.createElement('a');
-extraA.appendChild(fontAwe("fa-brands fa-youtube fa-fw"));
-extraA.append(" ",extraKey);
-extraA.href = extraValue;
-extraA.target = "extra";
-extraP.appendChild(extraA);
-entryPg.appendChild(extraP);
-};
-};
+// var extraArr = Object.keys(playlist[tar]["extra"]);
+// if (extraArr.length > 0) {
+// for (let ind = 0; ind < extraArr.length; ind++) {
+// var extraKey = extraArr[ind];
+// var extraValue = playlist[tar]["extra"][extraKey];
+// var extraP = document.createElement("p");
+// extraP.className = "extraLink entryDetailMove";
+// var extraA = document.createElement('a');
+// extraA.appendChild(fontAwe("fa-brands fa-youtube fa-fw"));
+// extraA.append(" ",extraKey);
+// extraA.href = extraValue;
+// extraA.target = "extra";
+// extraP.appendChild(extraA);
+// entryPg.appendChild(extraP);
+// };
+// };
 var tagDivP = document.createElement("p");
 tagDivP.innerHTML = playlist[tar]['description'];
 entryPg.appendChild(tagDivP);
