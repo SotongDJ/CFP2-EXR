@@ -2,6 +2,8 @@
 
 The unofficial,  (CFP2) for ["Eye X Radio"](https://www.instagram.com/eyexradio/) podcast, located in [墨玉程市](https://xn--2os22eixx6na.xn--kpry57d/)
 
+![Homepage of CuttleFish Podcast Player for "Eye X Radio" podcast](/docs/ss/landscape-light-low.png "Landscape with light and low contrast theme")
+
 ## Website
 
 - Full link: [https://👁️.深海墨客.台灣/](https://xn--mp8h.xn--2os22eixx6na.xn--kpry57d/)
