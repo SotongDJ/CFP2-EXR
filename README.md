@@ -1,2 +1,67 @@
-# cfp2-exr
-CuttleFish podcast player for "Eye X Radio" podcast
+# CuttleFish podcast player for "Eye X Radio" podcast
+
+The unofficial,  (CFP2) for ["Eye X Radio"](https://www.instagram.com/eyexradio/) podcast, located in [墨玉程市](https://xn--2os22eixx6na.xn--kpry57d/)
+
+## Website
+
+- Full link: [https://👁️.深海墨客.台灣/](https://xn--mp8h.xn--2os22eixx6na.xn--kpry57d/)
+
+  > Most browsers **choose** to display emoji ("👁️") in punycode form ("xn--mp8h") to prevent phising
+
+- Shortened link: [https://trth.nl/?exr](https://trth.nl/?exr)
+- Backend git repo: <https://github.com/SotongDJ/CFP2>
+
+## Features
+
+- Select the tag and play the podcasts under that tag
+- Click the button and redirect to other platform
+- Can be installed into the system as a PWA
+  - By using the Progressive Web App (PWA) technique, this player can be installed on the operating system (Windows, macOS, Linux, Chrome OS, iOS, and Android) and have user experiences similar to the native app (like playback control in the notification bar, system level playback control)
+
+    > "Progressive Web Apps (PWAs) are web apps that use service workers, manifests, and other web-platform features in combination with progressive enhancement to give users an experience on par with native apps." - [Progressive web apps (PWAs) | MDN](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
+
+- No user's information is collected at this website
+  - This site is a static website
+  - This site does not use any tracking scripts
+  - This site is hosted on GitHub Pages
+  - According to GitHub Pages, GitHub collects users' IP addresses for security purposes when browsing this site
+
+    > "When a GitHub Pages site is visited, the visitor's IP address is logged and stored for security purposes, regardless of whether the visitor has signed into GitHub or not. For more information about GitHub's security practices, see GitHub Privacy Statement." - [Data collection - About GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#data-collection)
+
+- User data is stored in the browser
+  - This site uses the browser's local cache space to temporarily store the queue and episodes currently played by the user
+  - Cannot transfer to other browsers or devices
+- Follow system dark mode settings
+- Able to switch to high contrast theme
+- Able to use Picture-in-picture mode control playback (Public BETA)
+
+## Help
+
+- Go to: <https://github.com/SotongDJ/cfp2-exr/wiki>
+- Contact me: <https://www.instagram.com/cfp2_blg>
+
+## LICENSE
+
+- The fonts (Noto Sans Mono, Noto Sans TC) use in this website is licensed under the SIL Open Font License 1.1.
+  - See <https://fonts.google.com/attribution> for more detail
+- The icons (Font Awesome Free) use in this website is licensed under the CC BY 4.0 License and SIL Open Font License 1.1 License
+  - See <https://fontawesome.com/license/free> for more detail
+
+## TO DO
+
+- [x] ~~auto-update episodes~~ (archived)
+- [x] ~~fix other browser's theme~~ (archived)
+- [x] ~~design different colour theme~~ (archived)
+- [x] ~~design different contrast theme~~ (archived)
+- [x] ~~month tag~~ (archived)
+- [x] ~~share button~~ (archived)
+  - [x] ~~tag share~~ (archived)
+  - [x] ~~episode share~~ (archived)
+- [x] ~~episode detail info~~
+  - [x] ~~podcast episode detail~~
+  - [ ] include youtube shorts/teaser
+- [x] ~~customize playback control UI~~ (archived)
+- [ ] able to customize playback queue
+- [ ] offline playback
+  - use browser to cache podcast and manage downloaded content are too complicated
+  - offline playback may be supported in future

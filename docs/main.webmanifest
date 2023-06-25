@@ -1,0 +1,174 @@
+{
+"description": "位於墨玉程市的 CFP2-EXR 眼球地下電台播放室",
+"dir": "ltr",
+"display": "standalone",
+"display_override": ["fullscreen", "minimal-ui"],
+"name": "CFP2-EXR 眼球地下電台播放室",
+"lang": "zh-Hant-TW",
+"orientation": "any",
+"scope": "/",
+"short_name": "EXR",
+"start_url": "/",
+"background_color": "#000000",
+"theme_color": "#000000",
+"categories": ["books","entertainment","lifestyle","podcast","politics"],
+"screenshots": [
+{
+"src": "/ss/macos-light-low.png",
+"sizes": "1000x597",
+"type": "image/png",
+"platform": "wide",
+"label": "Homescreen in light theme with low contrast"
+},
+{
+"src": "/ss/macos-light-high.png",
+"sizes": "1000x597",
+"type": "image/png",
+"platform": "wide",
+"label": "Homescreen in light theme with high contrast"
+},
+{
+"src": "/ss/macos-dark-low.png",
+"sizes": "1000x597",
+"type": "image/png",
+"platform": "wide",
+"label": "Homescreen in dark theme with low contrast"
+},
+{
+"src": "/ss/macos-dark-high.png",
+"sizes": "1000x597",
+"type": "image/png",
+"platform": "wide",
+"label": "Homescreen in dark theme with high contrast"
+},
+{
+"src": "/ss/android-light-low.png",
+"sizes": "1080x2340",
+"type": "image/png",
+"platform": "narrow",
+"label": "Homescreen in light theme with low contrast"
+},
+{
+"src": "/ss/android-light-high.png",
+"sizes": "1080x2340",
+"type": "image/png",
+"platform": "narrow",
+"label": "Homescreen in light theme with high contrast"
+},
+{
+"src": "/ss/android-dark-low.png",
+"sizes": "1080x2340",
+"type": "image/png",
+"platform": "narrow",
+"label": "Homescreen in dark theme with low contrast"
+},
+{
+"src": "/ss/android-dark-high.png",
+"sizes": "1080x2340",
+"type": "image/png",
+"platform": "narrow",
+"label": "Homescreen in dark theme with high contrast"
+},
+{
+"src": "/ss/ios-light-low.png",
+"sizes": "1242x2208",
+"type": "image/png",
+"platform": "narrow",
+"label": "Homescreen in light theme with low contrast"
+},
+{
+"src": "/ss/ios-light-high.png",
+"sizes": "1242x2208",
+"type": "image/png",
+"platform": "narrow",
+"label": "Homescreen in light theme with high contrast"
+},
+{
+"src": "/ss/ios-dark-low.png",
+"sizes": "1242x2208",
+"type": "image/png",
+"platform": "narrow",
+"label": "Homescreen in dark theme with low contrast"
+},
+{
+"src": "/ss/ios-dark-high.png",
+"sizes": "1242x2208",
+"type": "image/png",
+"platform": "narrow",
+"label": "Homescreen in dark theme with high contrast"
+},
+{
+"src": "/ss/windows-light-low.png",
+"sizes": "752x615",
+"type": "image/png",
+"platform": "wide",
+"label": "Homescreen in light theme with low contrast"
+},
+{
+"src": "/ss/windows-light-high.png",
+"sizes": "752x615",
+"type": "image/png",
+"platform": "wide",
+"label": "Homescreen in light theme with high contrast"
+},
+{
+"src": "/ss/windows-dark-low.png",
+"sizes": "752x615",
+"type": "image/png",
+"platform": "wide",
+"label": "Homescreen in dark theme with low contrast"
+},
+{
+"src": "/ss/windows-dark-high.png",
+"sizes": "752x615",
+"type": "image/png",
+"platform": "wide",
+"label": "Homescreen in dark theme with high contrast"
+}
+],
+"icons": [
+{
+"src": "r/maskable-512.png",
+"type": "image/png",
+"sizes": "512x512",
+"purpose": "any"
+},
+{
+"src": "r/maskable-512.png",
+"type": "image/png",
+"sizes": "512x512",
+"purpose": "maskable"
+},
+{
+"src": "r/android-chrome-192x192.png",
+"type": "image/png",
+"sizes": "192x192",
+"purpose": "any"
+},
+{
+"src": "r/apple-touch-icon.png",
+"type": "image/png",
+"sizes": "180x180",
+"purpose": "any"
+},
+{
+"src": "r/favicon-32x32.png",
+"type": "image/png",
+"sizes": "32x32",
+"purpose": "any"
+},
+{
+"src": "r/favicon-16x16.png",
+"type": "image/png",
+"sizes": "16x16",
+"purpose": "any"
+},
+{
+"src": "favicon.ico",
+"type": "image/x-icon",
+"sizes": "64x64",
+"purpose": "any"
+}
+],
+"shortcuts": []
+}
