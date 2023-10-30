@@ -13,7 +13,7 @@ padding:0rem 1rem;
 
 .neutral {
 --clr1:hsl(  0,   0%, 100%);
---clr4:hsl(198, 100%,  98%);
+--clr4:hsl(  0, 100%,  98%);
 --clr5:hsl(  0, 100%,  97%);
 --clr6:hsl(  0,  92%,  90%);
 --clr7:hsl(  0,  89%,  74%);
@@ -22,8 +22,8 @@ padding:0rem 1rem;
 --clr2:hsl(  0,   0%,  20%);
 --clr3:hsl(  0,   0%,   0%);
 --clr9:hsl(  0,   0%,   0%);
---oddc:hsl(230,  92%,  90%);
---evnc:hsl(232, 100%,  97%);
+--oddc:hsl(  0,  92%,  90%);
+--evnc:hsl(  0, 100%,  97%);
 }
 @media (prefers-color-scheme:dark) {
 .neutral {
