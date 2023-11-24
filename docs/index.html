@@ -50,63 +50,90 @@
 <h1 id="titleH1" class="titleH1"><a href="https://xn--2os22eixx6na.xn--kpry57d/category/CFP2/" target="info" title="All CFP2 所有播放室"><span class="mirror">🦑</span> CFP2</a>·<a href="https://www.instagram.com/eyexradio/" target="info" title="Eye X Radio 眼球地下電台"><span class="mirror">👁</span> EXR <span class="playerPost">眼球地下電台</span></a><span class="playerPost">播放室</span></h1>
 <div class="funcContent">
 <div class="tagBar">
-<span id="titleSpan" class="titleSpan"><a href="https://xn--2os22eixx6na.xn--kpry57d/category/CFP2/" target="info" title="All CFP2 所有播放室"><span class="mirror">🦑</span> CFP2</a>·<a href="https://www.instagram.com/eyexradio/" target="info" title="Eye X Radio 眼球地下電台"><span class="mirror">👁</span> EXR </a>｜</span>
-<span class="buttonDiv"><i id="tagI" class="fa-solid fa-square-caret-down fa-fw"></i>
-<a id="tagA" href="javascript:void(toggleTag())">標籤</a></span>
-<span class="buttonDiv"><i id="sortI" class="fa-solid fa-sort fa-fw"></i>
-<a id="sortA" href="javascript:void(toggleSort())">排序</a></span>
-<span class="buttonDiv"><i class="fa-brands fa-instagram fa-fw"></i>
-<a href="https://www.instagram.com/eyexradio/" target="info">埃居</a></span>
-<span class="buttonDiv"><i id="moreI" class="fa-solid fa-square-plus fa-fw"></i>
-<a href="javascript:void(toggleMoreOpt())">更多</a></span>
+<span id="titleSpan" class="titleSpan">
+ <a href="https://xn--2os22eixx6na.xn--kpry57d/category/CFP2/" target="info" title="All CFP2 所有播放室" class="linkDecor activeBtn tagBorder"><span class="mirror">🦑</span> CFP2</a>
+ <a href="https://www.instagram.com/eyexradio/" target="info" title="Eye X Radio 眼球地下電台" class="linkDecor activeBtn tagBorder"><span class="mirror">👁</span> EXR </a>
+ <span>｜</span></span>
+<span class="linkDecor activeBtn tagBorder">
+ <a href="javascript:void(toggleTag())" class="white">
+ <i id="tagI" class="fa-solid fa-square-caret-down fa-fw"></i></a></span>
+<span class="linkDecor activeBtn tagBorder">
+ <a href="javascript:void(toggleSort())" class="white">
+ <i id="sortI" class="fa-solid fa-sort fa-fw"></i></a></span>
+<span class="linkDecor activeBtn tagBorder">
+ <a href="javascript:void(toggleColour())" class="white">
+ <i id="colourI" class="fa-solid fa-cloud fa-fw"></i></a></span>
+<span class="linkDecor activeBtn tagBorder">
+ <a href="javascript:void(toggleContrast())" class="white">
+ <i id="contraI" class="fa-solid fa-circle-half-stroke fa-fw"></i></a></span>
+<span class="linkDecor activeBtn tagBorder">
+ <a href="https://www.instagram.com/cfp2_EXR/" class="white" target="info">
+ <i class="fa-brands fa-instagram fa-fw"></i></a></span>
+<span class="linkDecor activeBtn tagBorder">
+ <a href="javascript:void(toggleMoreOpt())" class="white">
+ <i id="moreI" class="fa-solid fa-square-plus fa-fw"></i></a></span>
 </div>
 </div>
 </div>
 
 <div id="morePage" class="morePage" style="visibility:hidden;">
-<div id="shareTag" class="buttonDiv" style="display:none;">
- <a href="javascript:void(shareTags())">
+<div class="tagBorder activeBtn buttonDiv">
+ <i class="fa-solid fa-tags fa-fw"></i>
+ <a id="tagA" href="javascript:void(toggleTag())">標籤</a></div>
+<div class="tagBorder activeBtn buttonDiv">
+ <i class="fa-solid fa-sort fa-fw"></i>
+ <a id="sortA" href="javascript:void(toggleSort())">排序</a></div>
+<div class="tagBorder activeBtn buttonDiv">
+ <i class="fa-solid fa-cloud fa-fw"></i>
+ <a id="colourA" href="javascript:void(toggleColour())">預設晝夜</a></div>
+<div class="tagBorder activeBtn buttonDiv">
+ <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+ <a id="contraA" href="javascript:void(toggleContrast())">對比</a></div>
+<div class="tagBorder activeBtn buttonDiv">
+ <i class="fa-brands fa-instagram fa-fw"></i>
+ <a href="https://www.instagram.com/cfp2_EXR/" target="info">埃居</a></div>
+<div id="shareTag" class="tagBorder activeBtn buttonDiv" style="display:none;">
+ <a href="javascript:void(shareTags())" class="white">
  <i class="fa-solid fa-tags fa-fw"></i>
  分享標籤
  <span id="tagSpan"></span>
  </a></div>
-<div id="shareEpi" class="buttonDiv" style="display:none;">
- <a href="javascript:void(shareNow())">
+<div id="shareEpi" class="tagBorder activeBtn buttonDiv" style="display:none;">
+ <a href="javascript:void(shareNow())" class="white">
  <i class="fa-solid fa-record-vinyl fa-fw"></i>
  分享本集
  </a></div>
-<div id="shareCuT" class="buttonDiv" style="display:none;">
- <a href="javascript:void(shareNow(1))">
+<div id="shareCuT" class="tagBorder activeBtn buttonDiv" style="display:none;">
+ <a href="javascript:void(shareNow(1))" class="white">
  <i class="fa-solid fa-stopwatch fa-fw"></i>
  分享此刻
  <span id="cuTSpan"></span>
  </a></div>
-<div id="shareResultDiv" class="buttonDiv" style="display:none;">
+<div id="shareResultDiv" class="tagBorder activeBtn buttonDiv" style="display:none;">
  <i class="fa-solid fa-circle-xmark fa-fw"></i>
  <a href="javascript:void(clearShare())">
- <span id="shareResultA"></span></a>
- ：
- <a id="shareLink">Link</a>
+ <span id="shareResultA"></span></a>：<a id="shareLink">Link</a>
 </div>
-<div class="buttonDiv"><i id="colourI" class="fa-solid fa-cloud fa-fw"></i>
- <a id="colourA" href="javascript:void(toggleColour())">預設晝夜</a></div>
-<div class="buttonDiv"><i id="contraI" class="fa-solid fa-circle-half-stroke fa-fw"></i>
- <a id="contraA" href="javascript:void(toggleContrast())">對比</a></div>
-<div class="buttonDiv"><i class="fa-solid fa-envelope fa-fw"></i>
+<div class="tagBorder activeBtn buttonDiv">
+ <i class="fa-solid fa-envelope fa-fw"></i>
  <a href="mailto:github@stdj.me?subject=EXR 回饋信件&body=內容類型：（問題？建議？）%0A細節：（越詳細越好）">回饋</a>
  </div>
-<div class="buttonDiv"><i class="fa-solid fa-life-ring fa-fw"></i>
-<a href="https://github.com/SotongDJ/cfp2-exr/wiki" target="info">指南</a></div>
-<div class="buttonDiv"><i class="fa-solid fa-circle-info fa-fw"></i>
-<a href="https://github.com/SotongDJ/cfp2-exr" target="info">關於</a></div>
-<div class="buttonDiv"><i class="fa-solid fa-trash-can fa-fw"></i>
-<a href="/?do=reset">重置本站</a></div>
-<div class="buttonDiv"><i class="fa-solid fa-rotate fa-fw"></i>
-<a href="https://xn--mp8h.xn--2os22eixx6na.xn--kpry57d/">重新更新</a></div>
+<div class="tagBorder activeBtn buttonDiv">
+ <i class="fa-solid fa-life-ring fa-fw"></i>
+ <a href="https://github.com/SotongDJ/cfp2-exr/wiki" target="info">指南</a></div>
+<div class="tagBorder activeBtn buttonDiv">
+ <i class="fa-solid fa-circle-info fa-fw"></i>
+ <a href="https://github.com/SotongDJ/cfp2-exr" target="info">關於</a></div>
+<div class="tagBorder activeBtn buttonDiv">
+ <i class="fa-solid fa-trash-can fa-fw"></i>
+ <a href="/?do=reset">重置本站</a></div>
+<div class="tagBorder activeBtn buttonDiv">
+ <i class="fa-solid fa-rotate fa-fw"></i>
+ <a href="https://xn--mp8h.xn--2os22eixx6na.xn--kpry57d/">重新更新</a></div>
 </div>
 
 <div id="tagindex" class="tagIndex">
-<div id="indexbar" class="indexSection"></div>
+ <div id="indexbar" class="indexSection"></div>
 </div>
 
 <div class="tagContent">

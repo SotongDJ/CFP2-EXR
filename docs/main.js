@@ -116,8 +116,8 @@ argueObj[key] = [value];
 };
 
 var argueKey = Object.keys(argueObj);
-var defaultObj = {"key":[],"now":"","currentTS":"","union":"false","sort":"neutral","colour":"neutral","contrast":"lowContrast"};
-var optionObj = {"key":[],"now":"","currentTS":"","union":"false","sort":"neutral","colour":"neutral","contrast":"lowContrast"};
+var defaultObj = {"key":[],"now":"","currentTS":"","union":"false","sort":"neutral","colour":"neutral","contrast":"highContrast"};
+var optionObj = {"key":[],"now":"","currentTS":"","union":"false","sort":"neutral","colour":"neutral","contrast":"highContrast"};
 var optionKey = Object.keys(optionObj);
 
 for (var ark = 0; ark < argueKey.length; ++ark) {
@@ -495,7 +495,7 @@ let nameStr = playlist[storage.getItem('now')]['image'];
 popPipDOM.style['background-image'] = `url("https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/512.png")`;
 navigator.mediaSession.metadata = new MediaMetadata({
 title:playlist[storage.getItem('now')]['name'],
-artist:'百靈果 News',
+artist:'Eye X Radio 眼球地下電台',
 album:playlist[storage.getItem('now')]['tag'].join(" "),
 artwork:[
 { src:`https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/96.png`,sizes:'96x96',type:'image/png' },
@@ -790,22 +790,6 @@ shareSpan.appendChild(link(shareStr,[fontAwe("fa-solid fa-share-from-square fa-f
 buttonPdom.appendChild(shareSpan);
 entryPg.appendChild(buttonPdom);
 // entryPg.appendChild(document.createElement("p"));
-// var extraArr = Object.keys(playlist[tar]["extra"]);
-// if (extraArr.length > 0) {
-// for (let ind = 0; ind < extraArr.length; ind++) {
-// var extraKey = extraArr[ind];
-// var extraValue = playlist[tar]["extra"][extraKey];
-// var extraP = document.createElement("p");
-// extraP.className = "extraLink entryDetailMove";
-// var extraA = document.createElement('a');
-// extraA.appendChild(fontAwe("fa-brands fa-youtube fa-fw"));
-// extraA.append(" ",extraKey);
-// extraA.href = extraValue;
-// extraA.target = "extra";
-// extraP.appendChild(extraA);
-// entryPg.appendChild(extraP);
-// };
-// };
 var tagDivP = document.createElement("p");
 tagDivP.innerHTML = playlist[tar]['description'];
 entryPg.appendChild(tagDivP);
@@ -878,7 +862,7 @@ function shareTags() {
 if (navigator.share) {
 var drawKeyArr = getArr(storage.getItem('key'));
 var targetUrl_str = "https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/?key="+drawKeyArr.join(",");
-var targetTitle_str = "【百靈果 News】標籤："+drawKeyArr.join("、");
+var targetTitle_str = "【Eye X Radio 眼球地下電台】標籤："+drawKeyArr.join("、");
 navigatorShare(targetUrl_str,targetTitle_str);
 } else {
 clipboardShare(targetUrl_str);
@@ -891,7 +875,7 @@ var drawKeyArr = getArr(storage.getItem('key'));
 var nowStr = (at=="")?storage.getItem('now'):at;
 var currentTsStr = (storage.getItem('currentTS')==""||t==0)?"":"&currentTS="+storage.getItem('currentTS');
 var targetUrl_str = "https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/?key="+drawKeyArr.join(",")+"&now="+nowStr+currentTsStr;
-var targetTitle_str = "【百靈果 News】："+playlist[nowStr]['name'];
+var targetTitle_str = "【Eye X Radio 眼球地下電台】："+playlist[nowStr]['name'];
 navigatorShare(targetUrl_str,targetTitle_str);
 } else {
 clipboardShare(targetUrl_str);
