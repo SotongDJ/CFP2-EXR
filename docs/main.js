@@ -6,13 +6,16 @@ const indexBarDOM = document.getElementById("indexbar");
 const unionSDOM = document.getElementById("unionSpan");
 const tagADOM = document.getElementById("tagA");
 const tagIDOM = document.getElementById("tagI");
-const sortADOM = document.getElementById("sortA");
 const sortIDOM = document.getElementById("sortI");
+const sortADOM = document.getElementById("sortA");
+const sortMDOM = document.getElementById("sortM");
 const moreIDOM = document.getElementById("moreI");
 const colourIDOM = document.getElementById("colourI");
 const colourADOM = document.getElementById("colourA");
+const colourMDOM = document.getElementById("colourM");
 const contraIDOM = document.getElementById("contraI");
 const contraADOM = document.getElementById("contraA");
+const contraMDOM = document.getElementById("contraM");
 const tagBarDOM = document.getElementById("tagbar");
 const tagListDOM = document.getElementById("taglist");
 const shareRsDivDOM = document.getElementById("shareResultDiv");
@@ -56,9 +59,9 @@ const stopStr = "fa-solid fa-circle-stop fa-fw";
 const unionToggleOnStr = "fa-solid fa-toggle-on fa-fw";
 const unionToggleOffStr = "fa-solid fa-toggle-off fa-fw";
 const tagUpStr = "fa-solid fa-square-caret-up fa-fw";
-const tagDownStr = "fa-solid fa-square-caret-down fa-fw";
+const tagDownStr = "fa-solid fa-tags fa-fw";
 const moreUpStr = "fa-solid fa-square-minus fa-fw";
-const moreDownStr = "fa-solid fa-square-plus fa-fw";
+const moreDownStr = "fa-solid fa-bars fa-fw";
 const sortFaStr = "fa-solid fa-sort fa-fw";
 const sortUpStr = "fa-solid fa-sort-up fa-fw";
 const sortDownStr = "fa-solid fa-sort-down fa-fw";
@@ -374,10 +377,18 @@ playSpan.appendChild(link("javascript: void(goToPlay(\""+tar+"\"))",playIdArr));
 buttonPdom.appendChild(playSpan);
 var controlSpan = document.createElement('span');
 controlSpan.className = "tagBorder";
-controlSpan.appendChild(link(playlist[tar]["apple"],[fontAwe("fa-brands fa-apple fa-fw")],"podcast"));
-controlSpan.appendChild(link(playlist[tar]["google"],[fontAwe("fa-brands fa-google fa-fw")],"podcast"));
-controlSpan.appendChild(link(playlist[tar]["spotify"],[fontAwe("fa-brands fa-spotify fa-fw")],"podcast"));
-// controlSpan.appendChild(link(playlist[tar]["youtube"],[fontAwe("fa-brands fa-youtube fa-fw")],"podcast"));
+if (show_apple) {
+  controlSpan.appendChild(link(playlist[tar]["apple"],[fontAwe("fa-brands fa-apple fa-fw")],"podcast"));
+}
+if (show_google) {
+  controlSpan.appendChild(link(playlist[tar]["google"],[fontAwe("fa-brands fa-google fa-fw")],"podcast"));
+}
+if (show_spotify) {
+  controlSpan.appendChild(link(playlist[tar]["spotify"],[fontAwe("fa-brands fa-spotify fa-fw")],"podcast"));
+}
+if (show_youtube) {
+  controlSpan.appendChild(link(playlist[tar]["youtube"],[fontAwe("fa-brands fa-youtube fa-fw")],"podcast"));
+}
 buttonPdom.appendChild(controlSpan);
 var shareSpan = document.createElement('span');
 shareSpan.className = "tagBorder";
@@ -407,11 +418,11 @@ doQueue(storage.getItem('now'));
 
 (storage.getItem("now")=="")||initPlay(storage.getItem("now"));
 fillIndex();
-updateBtn("sort",sortADOM,sortIDOM);
+updateTxtNBtn("sort",sortADOM,sortIDOM,sortMDOM);
 updateTheme("colour");
-updateBtn("colour",colourADOM,colourIDOM);
+updateTxtNBtn("colour",colourADOM,colourIDOM,colourMDOM);
 updateTheme("contrast");
-updateBtn("contrast",contraADOM,contraIDOM);
+updateTxtNBtn("contrast",contraADOM,contraIDOM,contraMDOM);
 draw();
 
 async function doNext() {
@@ -495,7 +506,7 @@ let nameStr = playlist[storage.getItem('now')]['image'];
 popPipDOM.style['background-image'] = `url("https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/512.png")`;
 navigator.mediaSession.metadata = new MediaMetadata({
 title:playlist[storage.getItem('now')]['name'],
-artist:'Eye X Radio 眼球地下電台',
+artist:final_artist_str,
 album:playlist[storage.getItem('now')]['tag'].join(" "),
 artwork:[
 { src:`https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/96.png`,sizes:'96x96',type:'image/png' },
@@ -778,10 +789,18 @@ playSpan.appendChild(link("javascript: void(goToPlay(\""+tar+"\"))",playIdArr));
 buttonPdom.appendChild(playSpan);
 var controlSpan = document.createElement('span');
 controlSpan.className = "tagBorder";
-controlSpan.appendChild(link(playlist[tar]["apple"],[fontAwe("fa-brands fa-apple fa-fw")],"podcast"));
-controlSpan.appendChild(link(playlist[tar]["google"],[fontAwe("fa-brands fa-google fa-fw")],"podcast"));
-controlSpan.appendChild(link(playlist[tar]["spotify"],[fontAwe("fa-brands fa-spotify fa-fw")],"podcast"));
-// controlSpan.appendChild(link(playlist[tar]["youtube"],[fontAwe("fa-brands fa-youtube fa-fw")],"podcast"));
+if (show_apple) {
+  controlSpan.appendChild(link(playlist[tar]["apple"],[fontAwe("fa-brands fa-apple fa-fw")],"podcast"));
+}
+if (show_google) {
+  controlSpan.appendChild(link(playlist[tar]["google"],[fontAwe("fa-brands fa-google fa-fw")],"podcast"));
+}
+if (show_spotify) {
+  controlSpan.appendChild(link(playlist[tar]["spotify"],[fontAwe("fa-brands fa-spotify fa-fw")],"podcast"));
+}
+if (show_youtube) {
+  controlSpan.appendChild(link(playlist[tar]["youtube"],[fontAwe("fa-brands fa-youtube fa-fw")],"podcast"));
+}
 buttonPdom.appendChild(controlSpan);
 var shareSpan = document.createElement('span');
 shareSpan.className = "tagBorder";
@@ -790,7 +809,24 @@ shareSpan.appendChild(link(shareStr,[fontAwe("fa-solid fa-share-from-square fa-f
 buttonPdom.appendChild(shareSpan);
 entryPg.appendChild(buttonPdom);
 // entryPg.appendChild(document.createElement("p"));
+var extraArr = Object.keys(playlist[tar]["extra"]);
+if (extraArr.length > 0) {
+for (let ind = 0; ind < extraArr.length; ind++) {
+var extraKey = extraArr[ind];
+var extraValue = playlist[tar]["extra"][extraKey];
+var extraP = document.createElement("p");
+extraP.className = "extraLink entryDetailMove";
+var extraA = document.createElement('a');
+extraA.appendChild(fontAwe("fa-brands fa-youtube fa-fw"));
+extraA.append(" ",extraKey);
+extraA.href = extraValue;
+extraA.target = "extra";
+extraP.appendChild(extraA);
+entryPg.appendChild(extraP);
+};
+};
 var tagDivP = document.createElement("p");
+tagDivP.className = "descripBar";
 tagDivP.innerHTML = playlist[tar]['description'];
 entryPg.appendChild(tagDivP);
 detailPgDOM.innerHTML = "";
@@ -809,10 +845,11 @@ var sectionNowStr = storage.getItem(sectionStr);
 var nextStr = paramObj[sectionStr][sectionNowStr]['next'];
 storage.setItem(sectionStr,nextStr);
 };
-function updateBtn(sectionStr,targetADOM,targetIDOM) {
+function updateTxtNBtn(sectionStr,targetADOM,targetIDOM,targetMDOM) {
 var sectionNowStr = storage.getItem(sectionStr);
 targetADOM.innerText = paramObj[sectionStr][sectionNowStr]["text"];
 targetIDOM.className = paramObj[sectionStr][sectionNowStr]["class"];
+targetMDOM.className = paramObj[sectionStr][sectionNowStr]["class"];
 };
 function updateTheme(sectionStr) {
 var positionInt = paramObj[sectionStr]["position"];
@@ -824,16 +861,16 @@ document.body.className = layoutArr.join(" ");
     
 function toggleSort() {
 toggleBtn("sort");
-updateBtn("sort",sortADOM,sortIDOM);
+updateTxtNBtn("sort",sortADOM,sortIDOM,sortMDOM);
 draw();
 };
-function toggleTheme(sectionStr,targetADOM,targetIDOM) {
+function toggleTheme(sectionStr,targetADOM,targetIDOM,targetMDOM) {
 toggleBtn(sectionStr);
 updateTheme(sectionStr);
-updateBtn(sectionStr,targetADOM,targetIDOM);
+updateTxtNBtn(sectionStr,targetADOM,targetIDOM,targetMDOM);
 };
-function toggleColour() {toggleTheme("colour",colourADOM,colourIDOM)};
-function toggleContrast() {toggleTheme("contrast",contraADOM,contraIDOM)};
+function toggleColour() {toggleTheme("colour",colourADOM,colourIDOM,colourMDOM)};
+function toggleContrast() {toggleTheme("contrast",contraADOM,contraIDOM,contraMDOM)};
 
 function resizeDiv() {
 var verticalBool = (window.visualViewport.height > window.visualViewport.width);
@@ -861,8 +898,8 @@ resizeDiv();
 function shareTags() {
 if (navigator.share) {
 var drawKeyArr = getArr(storage.getItem('key'));
-var targetUrl_str = "https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/?key="+drawKeyArr.join(",");
-var targetTitle_str = "【Eye X Radio 眼球地下電台】標籤："+drawKeyArr.join("、");
+var targetUrl_str = final_root_path+"?key="+drawKeyArr.join(",");
+var targetTitle_str = "【"+final_artist_str+"】標籤："+drawKeyArr.join("、");
 navigatorShare(targetUrl_str,targetTitle_str);
 } else {
 clipboardShare(targetUrl_str);
@@ -874,8 +911,8 @@ if (navigator.share) {
 var drawKeyArr = getArr(storage.getItem('key'));
 var nowStr = (at=="")?storage.getItem('now'):at;
 var currentTsStr = (storage.getItem('currentTS')==""||t==0)?"":"&currentTS="+storage.getItem('currentTS');
-var targetUrl_str = "https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/?key="+drawKeyArr.join(",")+"&now="+nowStr+currentTsStr;
-var targetTitle_str = "【Eye X Radio 眼球地下電台】："+playlist[nowStr]['name'];
+var targetUrl_str = final_root_path+"?key="+drawKeyArr.join(",")+"&now="+nowStr+currentTsStr;
+var targetTitle_str = "【"+final_artist_str+"】："+playlist[nowStr]['name'];
 navigatorShare(targetUrl_str,targetTitle_str);
 } else {
 clipboardShare(targetUrl_str);
@@ -887,7 +924,7 @@ function clearShare() {shareRsDivDOM.style["display"] = "none";};
 async function navigatorShare(targetUrl,targetTitle) {
 var shareData = {
 url:targetUrl,
-title:"CFP2-EXR 眼球地下電台播放室",
+title:final_title_str,
 text:targetTitle,
 };
 shareRsDivDOM.style["display"] = "block";

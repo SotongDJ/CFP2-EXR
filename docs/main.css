@@ -11,68 +11,6 @@ margin:0;
 padding:0rem 1rem;
 }
 
-.neutral {
---clr1:hsl(  0,   0%, 100%);
---clr4:hsl(  0, 100%,  98%);
---clr5:hsl(  0, 100%,  97%);
---clr6:hsl(  0,  92%,  90%);
---clr7:hsl(  0,  89%,  74%);
---clr8:hsl(  0, 100%,  47%);
---clr0:hsl(  0, 100%,  35%);
---clr2:hsl(  0,   0%,  20%);
---clr3:hsl(  0,   0%,   0%);
---clr9:hsl(  0,   0%,   0%);
---clra:hsl(  0,   0%,  90%);
---oddc:hsl(  0,  92%,  90%);
---evnc:hsl(  0, 100%,  97%);
-}
-@media (prefers-color-scheme:dark) {
-.neutral {
---clr1:hsl(  0,   0%,   0%);
---clr4:hsl(  0, 100%,   6%);
---clr5:hsl(  0, 100%,  12%);
---clr6:hsl(  0, 100%,  24%);
---clr7:hsl(  0, 100%,  35%);
---clr8:hsl(  0, 100%,  47%);
---clr0:hsl(  0, 100%,  24%);
---clr2:hsl(  0,   0%,  60%);
---clr3:hsl(  0,   0%,  80%);
---clr9:hsl(  0,   0%, 100%);
---clra:hsl(  0,   0%,  35%);
---oddc:hsl(  0, 100%,  24%);
---evnc:hsl(  0, 100%,  12%);
-}
-}
-.light {
---clr1:hsl(  0,   0%, 100%);
---clr4:hsl(  0, 100%,  98%);
---clr5:hsl(  0, 100%,  97%);
---clr6:hsl(  0,  92%,  90%);
---clr7:hsl(  0,  89%,  74%);
---clr8:hsl(  0, 100%,  47%);
---clr0:hsl(  0, 100%,  35%);
---clr2:hsl(  0,   0%,  20%);
---clr3:hsl(  0,   0%,   0%);
---clr9:hsl(  0,   0%,   0%);
---clra:hsl(  0,   0%,  90%);
---oddc:hsl(  0,  92%,  90%);
---evnc:hsl(  0, 100%,  97%);
-}
-.dark {
---clr1:hsl(  0,   0%,   0%);
---clr4:hsl(  0, 100%,   6%);
---clr5:hsl(  0, 100%,  12%);
---clr6:hsl(  0, 100%,  24%);
---clr7:hsl(  0, 100%,  35%);
---clr8:hsl(  0, 100%,  47%);
---clr0:hsl(  0, 100%,  24%);
---clr2:hsl(  0,   0%,  60%);
---clr3:hsl(  0,   0%,  80%);
---clr9:hsl(  0,   0%, 100%);
---clra:hsl(  0,   0%,  35%);
---oddc:hsl(  0, 100%,  24%);
---evnc:hsl(  0, 100%,  12%);
-}
 .lowContrast {
 color:var(--text);
 background-color:var(--rtbg);
@@ -143,6 +81,9 @@ height:min-content;
 .buttonBar{
 white-space:nowrap;
 padding:1rem .25rem;
+}
+.descripBar {
+padding: 0 .5rem .5rem .5rem;
 }
 .tagBorder.buttonDiv{
 margin: .5rem;
@@ -364,6 +305,7 @@ margin:0;
 overflow-x:auto;
 overflow-y:hidden;
 white-space:nowrap;
+text-align: center;
 }
 .titleH1 {display:block;}
 .titleSpan {display:none;}
@@ -385,7 +327,7 @@ gap:.5rem;
 }
 @media (min-aspect-ratio: 1/1) and (min-height:401px) {
 .seeker{
-grid-template-rows:1fr;
-grid-template-columns:1fr min-content;
+    grid-template-rows:1fr;
+    grid-template-columns:1fr min-content;
 }
 }
