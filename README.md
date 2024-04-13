@@ -40,7 +40,7 @@ The unofficial,  (CFP2) for ["Eye X Radio"](https://www.instagram.com/eyexradio/
 ## Help
 
 - Go to: <https://github.com/SotongDJ/cfp2-exr/wiki>
-- Contact me: <https://www.instagram.com/cfp2_blg>
+- Contact me: <https://www.instagram.com/cfp2_pwa>
 
 ## LICENSE
 
